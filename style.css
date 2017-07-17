@@ -1,0 +1,101 @@
+form { 
+    padding: 20px; 
+    border-top: 2px solid #eee;
+
+}
+.form_upload{
+    float: left;
+    position: fixed;
+    right: 60px;
+}
+
+input[type='text'] { 
+    border-radius: 4px; 
+    border: 1px solid #999; 
+    width: 320px; 
+    display: block;
+    padding: 10px; 
+    font-size: 14px; 
+    margin-bottom: 10px; }
+form .actions { 
+    font-size: 14px; 
+    margin-top: 10px; }
+
+.actions { 
+    color: #bbb;      
+    font-size: 14px; }
+
+.actions span:hover { 
+    color: #444;
+    cursor: pointer; }
+
+ul li  {
+    flex-basis: 48%;
+    height: 320px;
+    width: 320px;
+    margin: 10px 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;}
+
+ul li  h4 {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    text-align: center;
+}
+
+ul li h5 {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+}
+ul li {
+    list-style: none;
+}
+
+.form_upload{
+    margin: 10px 0;
+}
+
+#preimage, #preimageEdit{
+    margin: 20px;
+}
+
+#total{
+    flex-basis: 48%;
+
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+#total h4{
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    text-align: center;
+
+}
+
+#total #total_items{
+    height: 100px;
+    width: 100px;    margin: 10px 0;
+
+}
+
