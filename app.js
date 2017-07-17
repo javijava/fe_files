@@ -7,14 +7,6 @@
       {
         "img_item": "http://via.placeholder.com/320x320",
         "txt_item": "ITEM 2"
-      },
-      {
-        "img_item": "http://via.placeholder.com/320x320",
-        "txt_item": "ITEM 3"
-      },
-      {
-        "img_item": "http://via.placeholder.com/320x320",
-        "txt_item": "ITEM 4"
       }];
     localStorage.setItem("list_items", JSON.stringify(list_items));
   }
