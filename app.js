@@ -109,6 +109,8 @@
     if (item_text.value.length < 3 ||
       item_text.value.length > 300) {
       alert('The description must not exceed 300 characters');
+      item_text.value = "";
+      document.getElementById('fileInputImage').value = ""
       return;
     }
     if (typeof image_src !== 'undefined' && image_src != '') {
@@ -146,6 +148,7 @@
           if (item_edit_text.value.length < 3 ||
             item_edit_text.value.length > 300) {
             alert('The description must not exceed 300 characters');
+            item_edit_text.value = "";
             return;
           }
           if (typeof image_src !== 'undefined' &&
