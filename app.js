@@ -116,7 +116,7 @@
     var item_text = document.getElementById('fileInputText');
     if (item_text.value.length < 3 ||
       item_text.value.length > 300) {
-      alert('La descripción debe tener como máximo 300 caracteres');
+      alert('The description must not exceed 300 characters');
       return;
     }
     if (typeof image_src !== 'undefined' && image_src != '') {
@@ -153,7 +153,7 @@
         update.addEventListener('click', function () {
           if (item_edit_text.value.length < 3 ||
             item_edit_text.value.length > 300) {
-            alert('La descripción debe tener como máximo 300 caracteres');
+            alert('The description must not exceed 300 characters');
             return;
           }
           if (typeof image_src !== 'undefined' &&
