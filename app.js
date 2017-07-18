@@ -12,7 +12,9 @@
   }
 
   list = document.getElementById('sortable');
+
   var image_src = '';
+
   function upload(image) {
     var idValue = image[0].getAttribute('id');
     var fileInput = image;
@@ -24,6 +26,8 @@
       var imageType = /image.*/;
       var reader = new FileReader();
       reader.onload = function (e) {
+
+          //alert("llega");
           img.src = reader.result;
           image_src = reader.result;
       }
@@ -36,6 +40,7 @@
             image_src = '';
             alert('The image must be 320x320');
             document.getElementById(idValue).value = "";
+            document.getElementById('fileInputText').value = "";
             if (idValue == 'fileInputImage') {
               fileDisplayArea.innerHTML = "";
             }
@@ -173,7 +178,7 @@
   // Clean fields form
   function clean_fields() {
     document.getElementsByTagName('input').value = "";
-    $('form')[0].reset();
+    $('form')[0].reset(); // Reset all form fields
     preimage.innerHTML = "";
   }
 
