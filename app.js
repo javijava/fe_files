@@ -12,9 +12,7 @@
   }
 
   list = document.getElementById('sortable');
-
   var image_src = '';
-
   function upload(image) {
     var idValue = image[0].getAttribute('id');
     var fileInput = image;
@@ -24,12 +22,19 @@
       var _URL = window.URL || window.webkitURL;
       var file = fileInput[0].files[0];
       var imageType = /image.*/;
+      var reader = new FileReader();
+      reader.onload = function (e) {
+          img.src = reader.result;
+          image_src = reader.result;
+      }
+        reader.readAsDataURL(file);
       if (file.type.match(imageType)) {
-
         var img = new Image();
         img.onload = function () {
           if (this.width != 320 && this.height != 320) {
-            alert('The image must be 320x320 99');
+            img.src = '';
+            image_src = '';
+            alert('The image must be 320x320');
             document.getElementById(idValue).value = "";
             if (idValue == 'fileInputImage') {
               fileDisplayArea.innerHTML = "";
@@ -44,14 +49,7 @@
 
           }
         };
-        var reader = new FileReader();
-        reader.onload = function (e) {
-
-          //alert("llega");
-          img.src = reader.result;
-          image_src = reader.result;
-        }
-        reader.readAsDataURL(file);
+        
       } else {
         alert("The file must be a image");
         fileDisplayArea.innerHTML = "";
@@ -175,7 +173,7 @@
   // Clean fields form
   function clean_fields() {
     document.getElementsByTagName('input').value = "";
-    $('form')[0].reset(); // Reset all form fields
+    $('form')[0].reset();
     preimage.innerHTML = "";
   }
 
